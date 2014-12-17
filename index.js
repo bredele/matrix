@@ -12,24 +12,24 @@ module.exports = Matrix;
  */
 
 function Matrix() {
-	if(!(this instanceof Matrix)) return new Matrix();
+  if(!(this instanceof Matrix)) return new Matrix();
   //do something
 }
 
 
 Matrix.prototype.row = function() {
-	// body...
+  // body...
 };
 
 
 Matrix.prototype.column = function() {
-	// body...
+  // body...
 };
 
 Matrix.prototype.get = function() {
-	// body...
+  // body...
 };
 
 Matrix.prototype.set = function() {
-	// body...
+  // body...
 };
