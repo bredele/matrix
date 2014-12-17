@@ -4,12 +4,12 @@
  */
 
 var assert = require('assert');
-var matrix = require('..');
+var Matrix = require('..');
 
 describe("API", function() {
 	
 	it("should have the following api", function() {
-		var mat = matrix();
+		var mat = new Matrix();
 		assert(mat.row);
 		assert(mat.column);
 		assert(mat.set);
@@ -24,7 +24,7 @@ describe("basic matrix", function() {
 
 	var mat;
 	beforeEach(function() {
-		mat = matrix(
+		mat = new Matrix(
 			[1, 0],
 			[0, 1]
 		);

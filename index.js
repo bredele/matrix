@@ -12,13 +12,26 @@ module.exports = Matrix;
  */
 
 function Matrix() {
-  if(!(this instanceof Matrix)) return new Matrix();
-  //do something
+  this.entries = [].slice.call(arguments) || [];
 }
+
+/**
+ * [get description]
+ * @return {[type]} [description]
+ */
+
+Matrix.prototype.get = function(row, column) {
+ return this.entries[row - 1][column - 1];
+};
+
+Matrix.prototype.set = function(row, column, value) {
+  this.entries[row][column] = value;
+  return this;
+};
 
 
 Matrix.prototype.row = function() {
-  // body...
+
 };
 
 
@@ -26,10 +39,7 @@ Matrix.prototype.column = function() {
   // body...
 };
 
-Matrix.prototype.get = function() {
-  // body...
-};
 
-Matrix.prototype.set = function() {
+Matrix.prototype.size = function() {
   // body...
 };
