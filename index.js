@@ -25,7 +25,7 @@ Matrix.prototype.get = function(row, column) {
 };
 
 Matrix.prototype.set = function(row, column, value) {
-  this.entries[row][column] = value;
+  this.entries[row - 1][column - 1] = value;
   return this;
 };
 

@@ -38,5 +38,10 @@ describe("basic matrix", function() {
 		assert.equal(mat.get(2,2), 1);
 	});
 
+	it('should update matrix', function() {
+    mat.set(1, 2, 4);
+    assert.equal(mat.get(1, 2), 4);
+	});
+
 });
 
