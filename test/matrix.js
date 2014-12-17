@@ -30,7 +30,6 @@ describe("basic matrix", function() {
 		);
 	});
 	
-
 	it("should initialize matrix", function() {
 		assert.equal(mat.get(1, 1), 1);
 		assert.equal(mat.get(1, 2), 0);
@@ -41,6 +40,12 @@ describe("basic matrix", function() {
 	it('should update matrix', function() {
     mat.set(1, 2, 4);
     assert.equal(mat.get(1, 2), 4);
+	});
+
+	it('should return matrix size', function() {
+		var size = mat.size();
+		assert.equal(size[0], 2);
+		assert.equal(size[1], 2);
 	});
 
 });

@@ -24,6 +24,20 @@ Matrix.prototype.get = function(row, column) {
  return this.entries[row - 1][column - 1];
 };
 
+
+/**
+ * Set matrix entry.
+ *
+ * Examples:
+ *
+ *   matrix.set(1, 1, 10);
+ *   
+ * @param {Number} row
+ * @param {Number} column 
+ * @param {Number} value
+ * @api public
+ */
+
 Matrix.prototype.set = function(row, column, value) {
   this.entries[row - 1][column - 1] = value;
   return this;
@@ -41,5 +55,5 @@ Matrix.prototype.column = function() {
 
 
 Matrix.prototype.size = function() {
-  // body...
+  return [this.entries.length, this.entries[0].length];
 };
